@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/containerLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/thumbnailImageView"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:lines="2"
+        android:ellipsize="end"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="This is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/authorTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintLeft_toLeftOf="@id/titleTextView"
+        tools:text="Dude McGuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/thumbnailImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/ic_media_play"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/videoTextView"
+        app:layout_constraintTop_toBottomOf="@id/authorTextView"
+        app:layout_constraintLeft_toLeftOf="@id/authorTextView"
+        android:textSize="20sp"
+        android:text="Video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

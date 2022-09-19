@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/votesBarrier"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post is some reddit post" />
+
+    <TextView
+        android:id="@+id/authorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        tools:text="Dude McGuy" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/upVotesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/arrow_up_float"
+        android:drawablePadding="10dp"
+        android:drawableTint="#00ff00"
+        tools:text="41" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upVotesTextView"
+        android:id="@+id/downVotesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/arrow_down_float"
+        android:drawablePadding="10dp"
+        android:drawableTint="#ff0000"
+        tools:text="23123" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/votesBarrier"
+        app:constraint_referenced_ids="upVotesTextView, downVotesTextView"
+        app:barrierDirection="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
